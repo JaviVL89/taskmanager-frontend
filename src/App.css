@@ -1,0 +1,158 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tarea-tarjeta {
+  border: 1px solid #dee2e6;
+  border-left: 6px solid transparent;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.tarea-tarjeta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Colores de prioridad para el borde izquierdo */
+.tarea-tarjeta.bg-light-danger {
+  border-left-color: #dc3545;
+}
+.tarea-tarjeta.bg-light-warning {
+  border-left-color: #ffc107;
+}
+.tarea-tarjeta.bg-light-info {
+  border-left-color: #0dcaf0;
+}
+
+/* Efecto hover de fondo (ligeramente más oscuro) */
+.tarea-tarjeta.bg-light-danger:hover {
+  background-color: #f8c2c2 !important;
+}
+.tarea-tarjeta.bg-light-warning:hover {
+  background-color: #ffe69c !important;
+}
+.tarea-tarjeta.bg-light-info:hover {
+  background-color: #c3e8f5 !important;
+}
+
+.alerta-custom {
+  animation: fadeInOut 4s ease-in-out forwards;
+  z-index: 1055;
+}
+
+.alerta-custom .alert {
+  background-color: #fff3cd;        /* amarillo claro */
+  border-color: #ffeeba;            /* borde un poco más marcado */
+  color: #856404;                   /* texto en tono oscuro */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  font-family: "Inter", sans-serif;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+}
+
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  color: #856404;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  font-family: "Inter", sans-serif;
+}
+
+.fade-message {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-message.show {
+  opacity: 1;
+}
+.fade-message {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body {
+  background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  font-family: 'Segoe UI', sans-serif;
+}
+

@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.boton-flotante:hover {
+  background-color: #0056b3;
+}
+
+.bg-light-danger {
+  background-color: #f8d7da !important;
+}
+
+.bg-light-warning {
+  background-color: #fff3cd !important;
+}
+
+.bg-light-info {
+  background-color: #d1ecf1 !important;
+}
+
+.boton-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 999px; /* más redondeado */
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.plus-icon {
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.boton-flotante:hover {
+  background-color: #0056b3;
+}
+
+.plus-icon {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: -2px;
+  user-select: none;
+}
+
+.alerta-custom {
+  animation: fadeInOut 4s ease-in-out forwards;
+  z-index: 1055;
+}
+
+.alerta-custom .alert {
+  background-color: #fff3cd;        /* amarillo claro */
+  border-color: #ffeeba;            /* borde un poco más marcado */
+  color: #856404;                   /* texto en tono oscuro */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  font-family: "Inter", sans-serif;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+}
+
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+}
+
+.fade-message {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-message.show {
+  opacity: 1;
+}
+.fade-message {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body {
+  background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  font-family: 'Segoe UI', sans-serif;
+}
+
