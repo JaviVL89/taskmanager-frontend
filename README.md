@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+TaskManager Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Frontend del proyecto Task Manager, desarrollado con React.
+Se conecta al backend taskmanager-backend
+ (Spring Boot + MongoDB) para gestionar tareas.
 
-## Available Scripts
+Tabla de contenidos
 
-In the project directory, you can run:
+Descripción
 
-### `npm start`
+Tecnologías
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Características
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Estructura del proyecto
 
-### `npm test`
+Instalación y uso
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Scripts disponibles
 
-### `npm run build`
+Conexión con el backend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Cómo contribuir
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Licencia
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Descripción
 
-### `npm run eject`
+Este proyecto constituye la parte de frontend de Task Manager.
+Ofrece una interfaz gráfica en la que los usuarios pueden:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Crear, listar, editar y eliminar tareas.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Organizar las tareas por estado, prioridad y fecha.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Visualizarlas en lista tipo Kanban y en calendario.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Editarlas mediante un modal intuitivo.
 
-## Learn More
+Tecnologías
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+React (Create React App)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+React Router DOM (navegación entre vistas)
 
-### Code Splitting
+Bootstrap (estilos modernos y responsivos)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Axios (comunicación con la API REST del backend)
 
-### Analyzing the Bundle Size
+react-big-calendar (vista de calendario para tareas)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Características
 
-### Making a Progressive Web App
+Vista de lista de tareas (Kanban) organizada por columnas:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Vencidas
 
-### Advanced Configuration
+Pendientes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Del día
 
-### Deployment
+Completadas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Vista de calendario de tareas con eventos interactivos.
 
-### `npm run build` fails to minify
+Modal para crear y editar tareas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Validaciones en frontend y backend (título obligatorio, fecha no anterior a hoy, etc.).
+
+Botón flotante para añadir nuevas tareas.
+
+Gestión de prioridades (alta, media, baja).
+
+Estructura del proyecto
+taskmanager-frontend/
+├── public/                # Archivos estáticos (index.html, favicon, etc.)
+├── src/
+│   ├── components/        # Componentes principales (TareaList, CalendarioTareas, etc.)
+│   ├── App.js             # Punto de entrada principal de React
+│   ├── index.js           # Renderizado en DOM
+│   └── services/          # Servicios para llamadas API con Axios
+├── package.json           # Dependencias y scripts
+└── README.md              # Este archivo
+
+Instalación y uso
+
+Clona el repositorio:
+
+git clone https://github.com/JaviVL89/taskmanager-frontend.git
+cd taskmanager-frontend
+
+
+Instala dependencias:
+
+npm install
+
+
+Inicia el servidor de desarrollo:
+
+npm start
+
+
+Abre la app en tu navegador:
+http://localhost:3000
+
+Scripts disponibles
+
+En este proyecto puedes ejecutar:
+
+npm start → ejecuta la app en modo desarrollo.
+
+npm run build → construye la app lista para producción en la carpeta build/.
+
+npm test → lanza el runner de pruebas.
+
+npm run eject → expone la configuración de CRA (irreversible).
+
+🔗 Conexión con el backend
+
+Este frontend consume la API REST del backend:
+taskmanager-backend
+
+Por defecto, se espera que el backend corra en:
+http://localhost:8080/api/tareas
+
+Si usas otra URL/puerto, ajusta la configuración en los servicios (src/services/).
+
+Cómo contribuir
+
+Haz un fork del repositorio
+
+Crea una rama (feature/nueva-funcionalidad)
+
+Haz commit de tus cambios
+
+Haz push a la rama
+
+Abre un Pull Request
+
+Licencia
+
+Este proyecto está bajo la licencia MIT.
+Consulta el archivo LICENSE para más detalles.
